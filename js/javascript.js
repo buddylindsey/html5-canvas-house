@@ -1,9 +1,13 @@
 (function() {
 
   $(document).ready(function() {
-    var addImage, layer, stage;
+    var addImage, layer, rotate, stage;
     stage = new Kinetic.Stage("canvas", 800, 800);
     layer = new Kinetic.Layer();
+    rotate = function(img) {
+      img.rotate(Math.PI / 4);
+      layer.draw();
+    };
     addImage = function(src) {
       var image;
       image = new Image();
@@ -12,8 +16,15 @@
         img = new Kinetic.Image({
           x: 10,
           y: 10,
+          centerOffset: {
+            x: this.width / 2,
+            y: this.height / 2
+          },
           image: image,
           draggable: true
+        });
+        img.on("mousedown", function() {
+          rotate(img);
         });
         layer.add(img);
         stage.add(layer);
