@@ -32,6 +32,11 @@
     $("#dresser").click(function() {
       addImage($("#dresser").data("src"));
     });
+    $("#save").click(function() {
+      stage.toDataURL(function(dataUrl) {
+        window.open(dataUrl);
+      }, false);
+    });
   });
 
 }).call(this);

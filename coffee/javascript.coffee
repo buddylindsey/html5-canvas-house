@@ -32,5 +32,13 @@ $(document).ready () ->
   $("#dresser").click () ->
     addImage($("#dresser").data("src")) 
     return
+  
+  $("#save").click () ->
+    stage.toDataURL (dataUrl) ->
+      window.open(dataUrl)
+      return
+    , false
+    return
+
   return
 
