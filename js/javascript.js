@@ -48,17 +48,8 @@
       };
       image.src = src;
     };
-    $("#wall").click(function() {
-      addImage($("#wall").data("src"));
-    });
-    $("#tv").click(function() {
-      addImage($("#tv").data("src"));
-    });
-    $("#bed").click(function() {
-      addImage($("#bed").data("src"));
-    });
-    $("#dresser").click(function() {
-      addImage($("#dresser").data("src"));
+    $(".baka").click(function() {
+      addImage($(this).data("src"));
     });
     $("#rotate").click(function() {
       if (toRotate) {

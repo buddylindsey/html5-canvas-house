@@ -45,20 +45,8 @@ $(document).ready () ->
     image.src = src
     return
 
-  $("#wall").click () ->
-    addImage($("#wall").data("src")) 
-    return
-
-  $("#tv").click () ->
-    addImage($("#tv").data("src")) 
-    return
-
-  $("#bed").click () ->
-    addImage($("#bed").data("src")) 
-    return
-
-  $("#dresser").click () ->
-    addImage($("#dresser").data("src")) 
+  $(".baka").click () ->
+    addImage($(this).data("src"))
     return
 
   $("#rotate").click () ->
